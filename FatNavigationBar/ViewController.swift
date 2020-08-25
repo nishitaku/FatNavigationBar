@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func nextPage(_ sender: UIButton) {
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "NextViewController") as! NextViewController
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated: true, completion: nil)
+    }
+    
 }
 
